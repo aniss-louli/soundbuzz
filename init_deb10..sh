@@ -27,8 +27,8 @@ sudo apt install software-properties-common -y
 sudo add-apt-repository "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib"
 sudo apt update -y && sudo apt install virtualbox-6.0 -y
 #Instal vagrant
-curl -O https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.deb
-sudo apt install ./vagrant_2.2.6_x86_64.deb -y
+curl -O https://releases.hashicorp.com/vagrant/2.2.10/vagrant_2.2.10_x86_64.deb
+sudo apt install ./vagrant_2.2.10_x86_64.deb -y
 sudo apt-get install rsync -y
 #Creation dossier kub
 mkdir cluster-k8s
