@@ -32,5 +32,3 @@ sudo apt install ./vagrant_2.2.10_x86_64.deb -y
 sudo apt-get install rsync -y
 #Creation dossier kub
 mkdir cluster-k8s
-
-
