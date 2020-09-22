@@ -1,3 +1,15 @@
+#Fixe l'IP
+sudo bash -c cat << EOF > /etc/network/interfaces
+iface ens192 inet static
+    address 192.168.70.3
+    netmask 255.255.255.0
+    gateway 192.168.70.250
+EOF
+#Déf des DNS
+sudo bash -c cat << EOF > /etc/resolv.conf
+nameserver 192.168.70.1
+nameserver 192.168.70.2
+EOF
 #MAJ 
 sudo apt install -y && sudo apt upgrade -y
 sudo apt install curl -y
@@ -30,5 +42,3 @@ sudo apt update -y && sudo apt install virtualbox-6.0 -y
 curl -O https://releases.hashicorp.com/vagrant/2.2.10/vagrant_2.2.10_x86_64.deb
 sudo apt install ./vagrant_2.2.10_x86_64.deb -y
 sudo apt-get install rsync -y
-#Creation dossier kub
-mkdir cluster-k8s
